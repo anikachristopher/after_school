@@ -52,3 +52,108 @@ Processing by ChildrenController#index as HTML
 Completed 200 OK in 9ms (Views: 1.1ms | ActiveRecord: 0.5ms | Allocations: 2030)
 
 
+Started GET "/children" for 127.0.0.1 at 2021-01-02 22:12:22 -0500
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/children"):
+  
+Started GET "/child_path" for 127.0.0.1 at 2021-01-02 22:12:59 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/child_path"):
+  
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mChild Create (0.8ms)[0m  [1m[32mINSERT INTO "children" ("name", "age", "grade", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Malik"], ["age", 9], ["grade", "fourth"], ["created_at", "2021-01-03 03:13:34.692687"], ["updated_at", "2021-01-03 03:13:34.692687"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/children" for 127.0.0.1 at 2021-01-02 22:13:42 -0500
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/children"):
+  
+Started GET "//schedules/:schedule_id/children/:id(.:format)" for 127.0.0.1 at 2021-01-02 22:15:07 -0500
+Processing by ChildrenController#show as */*
+  Parameters: {"schedule_id"=>":schedule_id", "id"=>":id("}
+  [1m[36mChild Load (0.3ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/children_controller.rb:44:in `set_child'
+Completed 404 Not Found in 14ms (ActiveRecord: 1.3ms | Allocations: 3251)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Child with 'id'=:id():
+  
+app/controllers/children_controller.rb:44:in `set_child'
+Started GET "//schedules/:schedule_id/children/:id(.:format)" for 127.0.0.1 at 2021-01-02 22:15:09 -0500
+Processing by ChildrenController#show as */*
+  Parameters: {"schedule_id"=>":schedule_id", "id"=>":id("}
+  [1m[36mChild Load (0.2ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/children_controller.rb:44:in `set_child'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms | Allocations: 498)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Child with 'id'=:id():
+  
+app/controllers/children_controller.rb:44:in `set_child'
+Started GET "/children" for 127.0.0.1 at 2021-01-02 22:15:29 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/children"):
+  
+Started GET "/schedules" for 127.0.0.1 at 2021-01-02 22:15:41 -0500
+Processing by SchedulesController#index as HTML
+  [1m[36mSchedule Load (0.3ms)[0m  [1m[34mSELECT "schedules".* FROM "schedules"[0m
+  ↳ app/controllers/schedules_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 1996)
+
+
+Started GET "/children" for 127.0.0.1 at 2021-01-02 22:15:47 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/children"):
+  
+Started GET "/child" for 127.0.0.1 at 2021-01-02 22:16:44 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/child"):
+  
+Started GET "/children" for 127.0.0.1 at 2021-01-02 22:16:51 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/children"):
+  
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mChild Create (0.6ms)[0m  [1m[32mINSERT INTO "children" ("name", "age", "grade", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Malik"], ["age", 9], ["grade", "fourth"], ["created_at", "2021-01-03 03:25:45.309689"], ["updated_at", "2021-01-03 03:25:45.309689"]]
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSchedule Create (0.6ms)[0m  [1m[32mINSERT INTO "schedules" ("weekday", "subject", "content", "child_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["weekday", "Monday"], ["subject", "Math"], ["content", "Completed chapter 1 of Go Math"], ["child_id", 2], ["created_at", "2021-01-03 03:25:45.385040"], ["updated_at", "2021-01-03 03:25:45.385040"]]
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSchedule Create (0.5ms)[0m  [1m[32mINSERT INTO "schedules" ("weekday", "subject", "content", "child_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["weekday", "Tuesday"], ["subject", "Reading"], ["content", "Completed chapter 1 of Lost"], ["child_id", 2], ["created_at", "2021-01-03 03:25:45.392644"], ["updated_at", "2021-01-03 03:25:45.392644"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/schedules" for 127.0.0.1 at 2021-01-02 22:26:02 -0500
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SchedulesController#index as HTML
+  [1m[36mSchedule Load (0.2ms)[0m  [1m[34mSELECT "schedules".* FROM "schedules"[0m
+  ↳ app/controllers/schedules_controller.rb:8:in `index'
+Completed 200 OK in 17ms (Views: 7.0ms | ActiveRecord: 0.6ms | Allocations: 8423)
+
+
+Started GET "/schedules" for 127.0.0.1 at 2021-01-02 22:26:43 -0500
+Processing by SchedulesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/schedules_controller.rb:8:in `index'
+  [1m[36mSchedule Load (0.1ms)[0m  [1m[34mSELECT "schedules".* FROM "schedules"[0m
+  ↳ app/controllers/schedules_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 7.8ms | ActiveRecord: 1.0ms | Allocations: 5765)
+
+
+Started GET "/children" for 127.0.0.1 at 2021-01-02 22:26:49 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/children"):
+  

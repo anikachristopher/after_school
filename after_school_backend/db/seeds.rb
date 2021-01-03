@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+malik = Child.create(name: "Malik", age: "9", grade: "fourth")
+
+malik.schedules.create([
+    {weekday: "Monday", subject: "Math", content: "Completed chapter 1 of Go Math"},
+    {weekday: "Tuesday", subject: "Reading", content: "Completed chapter 1 of Lost"},
+])
