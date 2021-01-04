@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
     //debugger;
     fetchSchedules();
+    fetchChild();
+    // deleteButton();
 });
 
 const BASE_URL = "http://127.0.0.1:3000/";
@@ -17,6 +19,7 @@ function fetchSchedules() {
     .then((resp) => resp.json())
     .then((schedules) => {
         for (const schedule of schedules){
+            // debugger;
             // console.log("rails obj", schedule)
             let newScheduleCard = new Schedule(
                 schedule.id,
@@ -25,13 +28,32 @@ function fetchSchedules() {
                 schedule.content,
                 schedule.child_id
             )
+            // debugger;
             // console.log("js obj", newScheduleCard);
-            //newScheduleCard.renderSchedule();
+            // debugger;
+            newScheduleCard.renderSchedules();
             //renderSchedule method not built as yet
         };
     });
 }
 
-function createSchedule() {}
 
-function deleteSchedule() {}
+
+function fetchChild() {
+    fetch(`${BASE_URL}/children`)
+    .then(resp => resp.json())
+    .then(children => {
+        for (const child of children){
+            let addChild = new Child(
+                child.id, 
+                child.name, 
+                child.age, 
+                child.grade)
+        addChild.renderChild();
+        }
+    
+    })
+    
+}
+
+ 
