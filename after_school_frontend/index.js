@@ -56,4 +56,83 @@ function fetchChild() {
     
 }
 
+function addShowFormButton() {
+    let newScheduleButton = document.createElement("button");
+    newScheduleButton.className = ("create-schedule-button")
+    newScheduleButton.innerHTML = "Create Schedule"
+    let childDiv = document.getElementById("children-container")
+    childDiv.appendChild(newScheduleButton)
+    newScheduleButton.addEventListener("click", showScheduleForm.bind(this)) 
+}
+
+
+//the function that's going to create and display the schedule form in the div assigned (create-schedule-button)
+// will have a create chedule button and ebvent listener for the event
+
+function createSchedule(e) {
+    // e.stopImmediatePropagation();
+    e.preventDefault();
+    // debugger;
+
+    let childDay = e.target.querySelector("#weekday_id").value;
+    let childSubject = e.target.querySelector("#subject_id").value;
+    let childContent = e.target.querySelector("#content").value
+    let childId = parseInt(e.target.querySelector("#child_id").value) //needs to come back as an integer so it knows what to assoc with since child ids are stored as integers and not strings in the db
  
+
+  let childSchedule = {
+    weekday: childDay,
+    subject: childSubject,
+    content: childContent,
+    child_id: childId
+  };  
+
+  fetch(`${BASE_URL}/schedules`,{
+    method: "POST",
+    headers:{
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(childSchedule),
+  })
+  .then((resp) => resp.json())
+  .then((s) => {
+    // console.log(s, "in create schedule")
+    // debugger
+    const schedule = new Schedule(
+      s.id,
+      s.weekday,
+      s.subject,
+      s.content,
+      s.child_id
+    )
+
+    schedule.renderSchedules();
+
+  });
+
+    //
+}
+
+function deleteSchedule() {
+  
+
+    //create delete button
+    //attach to each schedule
+    //add event listener to the button
+    const scheduleId = parseInt(
+        event.target.parentElement.id
+        );
+        
+        fetch(`http://127.0.0.1:3000/schedules/${scheduleId}`, {
+            method: "DELETE",
+            headers: {
+                "content-type": "application/json"
+            }
+        });
+        // debugger;
+        // .then(res => res.json());
+        alert("Schedule Deleted!");
+      
+      
+
+} 
