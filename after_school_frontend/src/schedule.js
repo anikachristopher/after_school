@@ -54,6 +54,24 @@ function deleteButton() {
     // createDeleteButton.addEventListener("click", e => deleteSchedule(e));
 }
 
+function addSubmitButton(){
+    let createScheduleButton = document.createElement("button");
+    createScheduleButton.className = ("new-schedule-button")
+    createScheduleButton.classList.add("submit")
+    createScheduleButton.innerHTML = "Submit"
+
+    
+    let newScheduleForm = document.getElementById("new-schedule-form");
+    debugger;
+    newScheduleForm.appendChild(createScheduleButton)
+    newScheduleForm.addEventListener("submit", e => createSchedule(e));
+            newScheduleForm.reset();
+
+
+    // scheduleForm.remove()
+
+    
+}
 
 
 
