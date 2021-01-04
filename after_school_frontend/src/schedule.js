@@ -36,6 +36,24 @@ class Schedule{
     }
 
 }
+function deleteButton() {
+    // let createDeleteButton = document.createElement("button");
+    // createDeleteButton.className = ("delete-schedule-button")
+    // createDeleteButton.classList.add("delete")
+    // // createDeleteButton.innerHTML = "Delete"
+    // let scheduleCards = document.getElementsByClassName("delete-schedule")
+    // debugger;
+    // scheduleCards.append(createDeleteButton)
+
+    //let deleteButtonListener = document.getElementById("delete-button");
+    document.querySelectorAll('.delete-schedule').forEach(button => {
+        button.addEventListener('click', event => {
+          deleteSchedule(event)
+        })
+      })
+    // createDeleteButton.addEventListener("click", e => deleteSchedule(e));
+}
+
 
 
 
