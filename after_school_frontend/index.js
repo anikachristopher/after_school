@@ -105,7 +105,7 @@ function createSchedule(e) {
       s.content,
       s.child_id
     )
-
+    document.getElementById("new-schedule-form").reset();
     schedule.renderSchedules();
 
   });
@@ -132,6 +132,7 @@ function deleteSchedule() {
         // debugger;
         // .then(res => res.json());
         alert("Schedule Deleted!");
+        window.location.reload();
       
       
 
