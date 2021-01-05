@@ -62,17 +62,15 @@ function addSubmitButton(){
 
     
     let newScheduleForm = document.getElementById("new-schedule-form");
-    debugger;
+    // debugger;
     newScheduleForm.appendChild(createScheduleButton)
     newScheduleForm.addEventListener("submit", e => createSchedule(e));
             newScheduleForm.reset();
-
-
+            
     // scheduleForm.remove()
 
     
 }
-
 
 
 function showScheduleForm(){
@@ -87,6 +85,7 @@ function showScheduleForm(){
         <input type="hidden" id="child_id" name="child_id" value=${event.target.previousSibling.id}>
           <label for="weekday_id">Weekday:</label><br>
           <select id="weekday_id" name="weekday">
+              <option value=""></option>
               <option value="Monday">Monday</option>
               <option value="Tuesday">Tuesday</option>
               <option value="Wednesday">Wednesday</option>
@@ -95,6 +94,7 @@ function showScheduleForm(){
           </select>
           <label for="subject_id">Subject:</label><br>
           <select id="subject_id" name="subject">
+              <option value=""></option>
               <option value="Math">Math</option>
               <option value="Reading">Reading</option>
               <option value="Creative Writing">Creative Writing</option>
@@ -104,8 +104,12 @@ function showScheduleForm(){
          <textarea name="content" id="content" cols="30" rows="10" required></textarea>
           </br>
           <div id="submit-button-div"></div>
-        </form>`
+
+        </form> `
           addSubmitButton();
+         
+         
+          
 }
 
 
