@@ -1,0 +1,36 @@
+body {
+    background-color: #F0FFFF
+}
+#create-schedule-form{
+    border-radius: 25px;
+    background: rgb(161, 46, 46);
+    padding: 20px; 
+    width: 200px;
+    height: 150px; 
+    margin: 0 auto;
+    letter-spacing: 3px;
+}
+
+#children-container{
+    letter-spacing: 3px;
+}
+
+h1 {
+    text-align: center;
+    color: black;
+    letter-spacing: 3px;
+}
+
+h2 {
+    text-align: center;
+    letter-spacing: 3px;
+}
+h3 {
+    text-decoration: underline
+}
+.delete-schedule{
+    background-color: tomato;
+}
+.new-schedule-button{
+    background-color: tomato;
+}
