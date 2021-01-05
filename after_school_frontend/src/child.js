@@ -29,6 +29,7 @@ class Child{
                   <option value="Thursday">Thursday</option>
                   <option value="Friday">Friday</option>
               </select>
+              <br>
               <label for="subject_id">Subject:</label><br>
               <select id="subject_id" name="subject">
                   <option value="Math">Math</option>
@@ -36,7 +37,7 @@ class Child{
                   <option value="Creative Writing">Creative Writing</option>
               </select>
              <br>
-             <label>Content:</label>
+             <label>Content:</label><br>
              <textarea name="content" id="content" cols="30" rows="10" required></textarea>
               </br>
               <div id="submit-button-div"></div>
