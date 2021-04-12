@@ -5,11 +5,20 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+# malik = Child.create(name: "Malik", age: "9", grade: "fourth")
+# require 'faker'
 
+# 5.times do
+#    Child.create([{name: Faker::Name.name, age: Faker::Number.within(range: 1..13), grade: Faker::Number.non_zero_digit}])
+#     end
 
-malik = Child.create(name: "Malik", age: "9", grade: "fourth")
+# Schedule.create([
+#     {weekday: "Monday", subject: "Math", content: "Completed chapter 1 of Go Math"},
+#     {weekday: "Tuesday", subject: "Reading", content: "Completed chapter 1 of Lost"},
+# ])
 
-malik.schedules.create([
-    {weekday: "Monday", subject: "Math", content: "Completed chapter 1 of Go Math"},
-    {weekday: "Tuesday", subject: "Reading", content: "Completed chapter 1 of Lost"},
+Child.create([{name: "Malik", age: "9", grade: "fourth"}])
+
+Schedule.create([
+    {weekday: "Monday", subject: "Math", content: "Completed chapter 1 of Go Math", child_id: 1}
 ])

@@ -8,17 +8,12 @@ class Schedule{
     }
 
     renderSchedules() {
-        
-        // let scheduleForm = document.getElementById("forms-container");
-        // scheduleForm.remove(); 
-    //If it isn't "undefined" and it isn't "null", then it exists.
-        // if(typeof(scheduleForm) != 'undefined' && scheduleForm != null){
-        // scheduleForm.remove()} 
+    
         let allSchedules = document.getElementById("schedules-container");
         
        
         // let schedulesDiv = document.getElementById("schedules-container");
-        // debugger;
+        
         // fetch 
         allSchedules.innerHTML += 
         // let currentWeekday = this.weekday
@@ -55,6 +50,7 @@ function deleteButton() {
 }
 
 function addSubmitButton(){
+    console.log("in add submit button in SCHEDULE.JS  ")
     let createScheduleButton = document.createElement("button");
     createScheduleButton.className = ("new-schedule-button")
     createScheduleButton.classList.add("submit")
@@ -73,48 +69,17 @@ function addSubmitButton(){
 }
 
 
-function showScheduleForm(){
-    let formDiv = document.getElementById("schedules-container");
-    // while (allSchedules.firstChild) {
-    //     allSchedules.removeChild(allSchedules.firstChild);
-    //   }
+// function showScheduleForm(){
+//     let formDiv = document.getElementById("forms-container"); //change this to forms container - new note
+//     // while (allSchedules.firstChild) {
+//     //     allSchedules.removeChild(allSchedules.firstChild);
+//     //   }
     
-// debugger;
-    formDiv.innerHTML += `
-    <form id="new-schedule-form">
-        <input type="hidden" id="child_id" name="child_id" value=${event.target.previousSibling.id}>
-          <label for="weekday_id">Weekday:</label><br>
-          <select id="weekday_id" name="weekday">
-              <option value=""></option>
-              <option value="Monday">Monday</option>
-              <option value="Tuesday">Tuesday</option>
-              <option value="Wednesday">Wednesday</option>
-              <option value="Thursday">Thursday</option>
-              <option value="Friday">Friday</option>
-          </select>
-          <label for="subject_id">Subject:</label><br>
-          <select id="subject_id" name="subject">
-              <option value=""></option>
-              <option value="Math">Math</option>
-              <option value="Reading">Reading</option>
-              <option value="Creative Writing">Creative Writing</option>
-          </select>
-         <br>
-         <label>Content:</label>
-         <textarea name="content" id="content" cols="30" rows="10" required></textarea>
-          </br>
-          <div id="submit-button-div"></div>
 
-        </form> `
-          addSubmitButton();
          
          
           
-}
-
-
-
-
+// }
 
 
 

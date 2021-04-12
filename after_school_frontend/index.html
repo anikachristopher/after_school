@@ -1,33 +1,60 @@
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>After School Journal</title>
-    <link rel="stylesheet" type="text/css" href="styles/style.css">
-    <script src="index.js"></script>
-    <script src="src/schedule.js"></script>
-    <script src="src/child.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>After School Journal</title>
+  <link rel="stylesheet" type="text/css" href="styles/style.css">
+
 </head>
 
 <div class="col-lg-12">
-        <h1 class="font-weight-light">After School Journal</h1> 
-        <h2>An online journal for kids to track supplemental work completed while attending school remotely</h2>
-      </div>
-      <br>
-      <header><h3 >Your Weekly Schedule</h3></header>
+  <h1 class="font-weight-light">After School Journal</h1>
+  <h2>An online journal for kids to track supplemental work completed while attending school remotely</h2>
+</div>
+<br>
+<header>
+  <h3>Your Weekly Schedule</h3>
+</header>
+
 <body>
+  <div class="row">
+    <div class="col s4">
+      <div class="card-panel white blue-text">
+        <div id="childform">
+          <form id="childForm">
+            <h3>Name</h3>
+            <input name="name" id='child_name' placeholder="Enter Name">
+            <h3>Age</h3>
+            <input type="text" name="child_age" id='child_age' placeholder="Enter Age">
+            <h3>Grade</h3>
+            <input type="text" name="grade" id='grade' placeholder="Enter Grade">
+            <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
     <!-- make create schedule button-->
     <div id="children-container"></div>
-    <!-- forms container -->
-    <div id="forms-container"><p>
 
-    </p></div>
+    <!-- forms container -->
+    <div id="forms-container">
+      <p>
+
+      </p>
+    </div>
     <!-- schedule container to hold all of my schedules -->
     <div id="schedules-container">
-        
-    </div >
-    
-    
+
+    </div>
+    <script type="module" src="src/schedule.js"></script>
+    <script type="module" src="src/child.js"></script>
+    <script type="module" src="src/app.js"></script>
+    <script type="module" src="src/index.js"></script>
+
+
 </body>
+
 </html>

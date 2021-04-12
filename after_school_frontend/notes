@@ -1,1 +1,133 @@
 schedules["data"].forEach((schedule)
+
+
+
+From schedule.js folder
+
+// let newScheduleForm = document.createElement("form")
+    // newScheduleForm.className = "new-schedule-form"
+
+    // let selectedChild = document.createElement("input")
+    // selectedChild.classList.add("hidden")
+    // selectedChild.className = "child_id"
+    // selectedChild.value = `${event.target.previousSibling.id}`
+
+    // let selectedDay = document.createElement("select")
+    // selectedDay.className = "weekday_id"
+    // let opt1 = document.createElement("option");
+    // opt1.value = "Monday";
+    // opt1.text = "Monday";
+    // let opt2 = document.createElement("option");
+    // opt2.value = "Tuesday";
+    // opt2.text = "Tuesday";
+    // let opt3 = document.createElement("option");
+    // opt3.value = "Wednesday";
+    // opt3.text = "Wednesday";
+    // let opt4 = document.createElement("option");
+    // opt4.value = "Thursday";
+    // opt4.text = "Thursday";
+    // let opt5 = document.createElement("option");
+    // opt5.value = "Friday";
+    // opt5.text = "Friday";
+    // selectedDay.add(opt1);
+    // selectedDay.add(opt2);
+    // selectedDay.add(opt3);
+    // selectedDay.add(opt4);
+    // selectedDay.add(opt5);
+
+    // let selectedSubject = document.createElement("select")
+    // selectedSubject.className = "subject_id"
+    // let math = document.createElement("option");
+    // math.value = "Math";
+    // math.text = "Math";
+    // let reading = document.createElement("option");
+    // reading.value = "Reading";
+    // reading.text = "Reading";
+    // let creativeWriting = document.createElement("option");
+    // creativeWriting.value = "Creative Writing";
+    // creativeWriting.text = "Creative Writing";
+    // selectedSubject.add(math);
+    // selectedSubject.add(reading);
+    // selectedSubject.add(creativeWriting);
+
+    // let contentDiv = document.createElement("textarea")
+    // contentDiv.className = "content"
+
+    // let createScheduleButton = document.createElement("button");
+    // createScheduleButton.className = ("new-schedule-button")
+    // createScheduleButton.classList.add("submit")
+    // createScheduleButton.innerHTML = "Submit"
+
+    
+    // // let submitScheduleButton = document.getElementById("new-schedule-form");
+    // debugger;
+    // newScheduleForm.addEventListener("submit", e => createSchedule(e));
+
+    // newScheduleForm.appendChild(selectedChild);
+    // newScheduleForm.appendChild(selectedDay);
+    // newScheduleForm.appendChild(selectedSubject);
+    // newScheduleForm.appendChild(contentDiv);
+    // newScheduleForm.appendChild(createScheduleButton);
+    // allSchedules.appendChild(newScheduleForm);
+    // debugger;
+
+
+
+value=${event.target.previousSibling.id}>
+
+
+
+
+child.js - line 24
+  <form id="new-schedule-form">
+            <input type="hidden" id="child_id" name="child_id" value=${this.id}>
+              <label for="weekday_id">Weekday:</label><br>
+              <select id="weekday_id" name="weekday">
+                  <option value="Monday">Monday</option>
+                  <option value="Tuesday">Tuesday</option>
+                  <option value="Wednesday">Wednesday</option>
+                  <option value="Thursday">Thursday</option>
+                  <option value="Friday">Friday</option>
+              </select>
+              <br>
+              <label for="subject_id">Subject:</label><br>
+              <select id="subject_id" name="subject">
+                  <option value="Math">Math</option>
+                  <option value="Reading">Reading</option>
+                  <option value="Creative Writing">Creative Writing</option>
+              </select>
+             <br>
+             <label>Content:</label><br>
+             <textarea name="content" id="content" cols="30" rows="10" required></textarea>
+              </br>
+              <div id="submit-button-div"></div>
+            </form>
+        `
+
+
+        <label for="weekday_id">Weekday:</label><br>
+              <select id="weekday_id" name="weekday">
+                  <option value="Monday">Monday</option>
+                  <option value="Tuesday">Tuesday</option>
+                  <option value="Wednesday">Wednesday</option>
+                  <option value="Thursday">Thursday</option>
+                  <option value="Friday">Friday</option>
+              </select>
+              <br>
+              <label for="subject_id">Subject:</label><br>
+              <select id="subject_id" name="subject">
+                  <option value="Math">Math</option>
+                  <option value="Reading">Reading</option>
+                  <option value="Creative Writing">Creative Writing</option>
+              </select>
+             <br>
+             <label>Content:</label><br>
+             <textarea name="content" id="content" cols="30" rows="10" required></textarea>
+              </br>
+              <div id="submit-button-div"></div>
+
+
+
+From HTML file
+               <link rel="stylesheet" type="text/css" href="styles/style.css">
+       

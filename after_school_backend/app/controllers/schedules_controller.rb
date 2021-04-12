@@ -22,6 +22,7 @@ class SchedulesController < ApplicationController
     else
       render json: @schedule.errors, status: :unprocessable_entity
     end
+    #these don't need to be instance variables
   end
 
   # PATCH/PUT /schedules/1
