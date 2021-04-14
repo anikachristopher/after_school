@@ -1,11 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
     //debugger;
-    fetchSchedules();
+    // fetchSchedules();
     fetchChild();
     // deleteButton();
 });
 
 const BASE_URL = "http://127.0.0.1:3000/";
+const entryForm = document.getElementById('entryForm');
 
 //build function using fetch request to display any existing schedules - READ - done
 //include this function in the DOM content loaded to fire upon app start - done
@@ -56,14 +57,29 @@ function fetchChild() {
     
 }
 
-function addShowFormButton() {
-    let newScheduleButton = document.createElement("button");
-    newScheduleButton.className = ("create-schedule-button")
-    newScheduleButton.innerHTML = "Create Schedule"
-    let childDiv = document.getElementById("children-container")
-    childDiv.appendChild(newScheduleButton)
-    newScheduleButton.addEventListener("click", showScheduleForm.bind(this)) 
-}
+
+function bindFormEventListener() {
+    entryForm.addEventListener("submit", function (eve) {
+        eve.preventDefault();
+        const formData = new FormData(eve.target);
+        const data = Object.fromEntries(formData.entries());
+        submitEntry(data);
+    })
+};
+    bindFormEventListener()
+
+    document.getElementsById("entryForm").reset();
+
+
+
+// function addShowFormButton() {
+//     let newScheduleButton = document.createElement("button");
+//     newScheduleButton.className = ("create-schedule-button")
+//     newScheduleButton.innerHTML = "Create Schedule"
+//     let childDiv = document.getElementById("children-container")
+//     childDiv.appendChild(newScheduleButton)
+//     newScheduleButton.addEventListener("click", showScheduleForm.bind(this)) 
+// }
 
 
 //the function that's going to create and display the schedule form in the div assigned (create-schedule-button)
