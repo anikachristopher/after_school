@@ -5,28 +5,92 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>After School Journal</title>
     <link rel="stylesheet" type="text/css" href="styles/style.css">
-    <script src="index.js"></script>
-    <script src="src/schedule.js"></script>
-    <script src="src/child.js"></script>
 </head>
-
+<body>
 <div class="col-lg-12">
         <h1 class="font-weight-light">After School Journal</h1> 
         <h2>An online journal for kids to track supplemental work completed while attending school remotely</h2>
       </div>
-      <br>
-      <header><h3 >Your Weekly Schedule</h3></header>
-<body>
+      <div class="topnav">
+          <a class="active" href="#home"></a>
+        </div>
+     <header> 
+      <h3>Your Weekly Schedule</h3>
+</header>
+<!-- Trigger/Open The Modal -->
+<button id="myBtn">Create Schedule</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p><div class="row">
+        <div class="col s4">
+
+            <div id="entryForm">
+              <form id="entry_form"> <form id="entryForm">
+                <label for="input-name">Name</label>
+                <input type="text" id='input-name' autofocus placeholder="Enter Name" tabindex="1"/>
+                <br>
+                <label for="input-age">Age</label>
+                <input type="text" name="input-age" autofocus placeholder="Enter Age" tabindex="2"/>
+                <br>
+                <label for="input-grade">Grade</label>
+                <input type="text" name="input-grade" autofocus placeholder="Enter Grade" tabindex="3"/>
+                <br>
+                <br>
+                <br>
+        <!-- <form id="new-schedule-form"> -->
+          <!-- <input type="hidden" id="child_id" name="child_id" value=${this.id}> -->
+            <label for="weekday_id">Weekday:</label>
+            <br>
+            <select id="weekday_id" name="weekday">
+                <option selected=true disabled="--">Select</option>
+                <option value="Monday">Monday</option>
+                <option value="Tuesday">Tuesday</option>
+                <option value="Wednesday">Wednesday</option>
+                <option value="Thursday">Thursday</option>
+                <option value="Friday">Friday</option>
+            </select>
+            <br>
+            <label for="subject_id">Subject:</label><br>
+            <select id="subject_id" name="subject">
+            <option selected=true disabled="--">Select</option>
+                <option value="Math">Math</option>
+                <option value="Reading">Reading</option>
+                <option value="Creative Writing">Creative Writing</option>
+            </select>
+           <br>
+           <label>Content:</label><br>
+           <textarea name="content" id="content" cols="30" rows="10" required></textarea>
+            </br>
+            <button class="btn waves-effect waves-light" type="submit" name="action">Submit</button>
+          </form>
+          </div >
+
+          <div id="schedules-container"></div>
+
+
+    </p>
+  </div>
+
+</div>
+
     <!-- make create schedule button-->
-    <div id="children-container"></div>
+    <!-- <div id="children-container"></div> -->
     <!-- forms container -->
-    <div id="forms-container"><p>
+    <!-- <div id="forms-container"><p> -->
 
     </p></div>
     <!-- schedule container to hold all of my schedules -->
-    <div id="schedules-container">
+    <!-- <div id="schedules-container"> -->
         
     </div >
+    <script src="src/schedule.js"></script>
+    <script src="src/child.js"></script>
+    <script src="index.js"></script>
     
     
 </body>
